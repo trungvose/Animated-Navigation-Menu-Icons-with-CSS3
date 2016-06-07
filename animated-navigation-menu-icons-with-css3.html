@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Animated Navigation Menu Icons with CSS3">
+    <meta name="author" content="Vo Tuan Trung">
+
+    <meta property="og:url" content="http://trungk18.github.io/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="I help companies and agencies build standards-compliant front-ends for fast, accessible and responsive web sites and applications." />
+    <meta property="og:image" content="http://trungk18.github.io/img/facebook-logo.jpg" />
+
+    <title>Animated Navigation Menu Icons with CSS3</title>
+
+    <link rel='shortcut icon' type='image/x-icon' href='http://trungk18.github.io/favicon.ico' />
+
+    <style type="text/css">
+        /*Common CSS*/
+        body {
+            margin: 0;
+        }
+
+        .navbar {
+            padding: 20px;
+            background: #e7e7e7;
+        }
+
+        .navbar-container {
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+
+        .brand > img {
+            max-width: 70px;
+        }
+
+        /*Menu container*/
+        .container {
+            position: relative;
+            cursor: pointer;
+            margin: 60px auto;
+        }
+
+        .bar {
+            display: block;
+            width: 35px;
+            height: 5px;
+            background-color: #333;
+            margin: 6px auto;
+            transition: 0.3s;
+            border-radius: 3px;
+        }
+
+        /*Rotate first bar*/
+        .change .bar1, .change .bar4 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+
+        /*Fade out the second bar*/
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        .change .bar5 {
+            width: 0%;
+        }
+
+        /*Rotate last bar*/
+        .change .bar3, .change .bar6 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a class="brand" href="http://trungk18.github.io/"><img src="http://trungk18.github.io/img/trungk18.png" class="img-responsive" title="trungk18" alt="trungk18" /></a>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="content">
+        <section>
+
+            <div class="container">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+            </div>
+
+            <div class="container" onclick="toggleMenu(this)">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+            </div>
+
+            <div class="container" onclick="toggleMenu(this)">
+                <span class="bar bar4"></span>
+                <span class="bar bar5"></span>
+                <span class="bar bar6"></span>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function toggleMenu(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+</body>
+</html>
