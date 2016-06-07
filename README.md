@@ -78,8 +78,8 @@ It is pretty straight forward, using *width* and *height* specify for each bar a
 We keep using the same class *.bar* with transition in 0.3s. And the important thing is adding class name for each bar. You can see bar1 to bar6 class.
 When the button is clicked on, *toggleMenu()* will be executed to toggle class *.change* to make magic happens.
 * bar1 will be rotated 45 degree counter-clockwise 
-* bar2 will be rotated 45 degree clockwise
-* bar3 will be faded out then disappeared
+* bar2 will be faded out then disappeared
+* bar3 will be rotated 45 degree clockwise
 
 Please check the image below for detail explanation of CSS rotate and translate(x,y)
 
