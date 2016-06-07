@@ -1,11 +1,11 @@
-###How to use CSS3 Transition and Transforms for animating menu "hamburger" icon with CSS3
+###How to use CSS3 Transition and Transforms for Animating Menu "hamburger" icon
 Demo: http://trungk18.github.io/demo/animated-navigation-menu-icons-with-css3.html
 
 In this demonstration, I will show you how to create an hamburger icon and put some simple animations when clicking.
 
 ####How To Create a Menu Icon
 
-#####HTML
+######HTML
 ```html
     <div class="container">
         <span class="bar bar1"></span>
@@ -14,7 +14,7 @@ In this demonstration, I will show you how to create an hamburger icon and put s
     </div>
 ```
 
-#####CSS
+######CSS
 ```css
     .container {
         position: relative;
@@ -37,7 +37,7 @@ It is pretty straight forward, using *width* and *height* specify for each bar a
 
 ####How To Create Animated Menu Icon
 
-#####HTML
+######HTML
 ```html
     <div class="container" onclick="toggleMenu(this)">
         <span class="bar bar1"></span>
@@ -46,7 +46,7 @@ It is pretty straight forward, using *width* and *height* specify for each bar a
     </div>
 ```
 
-#####CSS
+######CSS
 ```css
     /*Rotate first bar*/
     .change .bar1, .change .bar4 {
@@ -69,7 +69,7 @@ It is pretty straight forward, using *width* and *height* specify for each bar a
         transform: rotate(45deg) translate(-8px, -8px);
     }
 ```
-#####JS
+######JS
 ```javascript
 	function toggleMenu(x) {
 		x.classList.toggle("change");
@@ -79,7 +79,7 @@ We keep using the same class *.bar* with transition in 0.3s. And the important t
 When the button is clicked on, *toggleMenu()* will be executed to toggle class *.change* to make magic happens.
 * bar1 will be rotated 45 degree counter-clockwise 
 * bar2 will be rotated 45 degree clockwise
-* bar3 will be faded out then disappear 
+* bar3 will be faded out then disappeared
 
 Please check the image below for detail explanation of CSS rotate and translate(x,y)
 
