@@ -15,6 +15,7 @@
 
     <title>Animated Navigation Menu Icons with CSS3</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
     <link rel='shortcut icon' type='image/x-icon' href='http://trungk18.github.io/favicon.ico' />
 
     <style type="text/css">
@@ -37,6 +38,38 @@
             max-width: 70px;
         }
 
+        a {
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 12px;
+            margin: 4px;
+        }
+
+        .main-background {
+            background: #e7e7e7;
+        }
+
+        .change-content {
+            padding: 5px;
+        }
+
+        a::before, a::after, .btn::before {
+            font-family: 'FontAwesome';
+        }
+
+        .previous-tutorial::before {
+            content: '\f060';
+            margin: 5px;
+        }
+
+        .next-tutorial {
+            float: right;
+        }
+
+            .next-tutorial::after {
+                margin: 5px;
+                content: '\f118';
+            }
         /*Menu container*/
         .container {
             position: relative;
@@ -79,11 +112,15 @@
 </head>
 <body>
     <!-- Navigation -->
+    <div class="change-content main-background">
+        <a class="previous-tutorial" href="http://trungk18.github.io/demo/change-navigation-active-class-on-page-scroll.html" title="Change Navigation Active Class on Page Scroll with Bootstrap 3 Navigation & jQuery">Previous Tutorial</a>
+        <a class="next-tutorial" href="https://github.com/trungk18/Animated-Navigation-Menu-Icons-with-CSS3" title="How to use CSS3 Transition and Transforms for Animating Menu icon">Back to Github repository</a>
+    </div>
     <nav class="navbar">
         <div class="navbar-container">
             <a class="brand" href="http://trungk18.github.io/"><img src="http://trungk18.github.io/img/trungk18.png" class="img-responsive" title="trungk18" alt="trungk18" /></a>
         </div>
-    </nav>
+    </nav><!-- End Nav -->
 
     <!-- Content Section -->
     <div class="content">
