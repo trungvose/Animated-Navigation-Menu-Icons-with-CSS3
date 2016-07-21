@@ -9,30 +9,34 @@ In this demonstration, I will show you how to create an hamburger icon and put s
 
 ######HTML
 ```html
-    <div class="container">
-        <span class="bar bar1"></span>
-        <span class="bar bar2"></span>
-        <span class="bar bar3"></span>
-    </div>
+<div class="container">
+    <span class="bar bar1"></span>
+    <span class="bar bar2"></span>
+    <span class="bar bar3"></span>
+</div>
 ```
 
 ######CSS
 ```css
-    .container {
-        position: relative;
-        cursor: pointer;
-        margin: 60px auto;
-    }
+.icon-container {
+    float: left;
+    position: relative;
+    cursor: pointer;
+    margin: 0 5em 5em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
 
-    .bar {
-        display: block;
-        width: 35px;
-        height: 5px;
-        background-color: #333;
-        margin: 6px auto;
-        transition: 0.3s;
-        border-radius: 3px;
-    }
+.bar {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px auto;
+    transition: 0.3s;
+    border-radius: 3px;
+}
 ```
 
 It is pretty straight forward, using *width* and *height* specify for each bar and *margin* make some distance between them. Then we put three bar together, covered by a container.
