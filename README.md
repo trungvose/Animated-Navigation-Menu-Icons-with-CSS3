@@ -19,23 +19,25 @@ In this demonstration, I will show you how to create an hamburger icon and put s
 ######CSS
 ```css
 .icon-container {
-    float: left;
-    position: relative;
-    cursor: pointer;
-    margin: 0 5em 5em;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
+  float: left;
+  position: relative;
+  cursor: pointer;
+  margin: 0 5em 5em;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .bar {
-    display: block;
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px auto;
-    transition: 0.3s;
-    border-radius: 3px;
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px auto;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 3px;
 }
 ```
 
@@ -45,41 +47,47 @@ It is pretty straight forward, using *width* and *height* specify for each bar a
 
 ######HTML
 ```html
-    <div class="container" onclick="toggleMenu(this)">
-        <span class="bar bar1"></span>
-        <span class="bar bar2"></span>
-        <span class="bar bar3"></span>
-    </div>
+<div class="container" onclick="toggleMenu(this)">
+    <span class="bar bar1"></span>
+    <span class="bar bar2"></span>
+    <span class="bar bar3"></span>
+</div>
 ```
 
 ######CSS
 ```css
-    /*Rotate first bar*/
-    .change .bar1, .change .bar4 {
-        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-        transform: rotate(-45deg) translate(-9px, 6px);
-    }
+/*Rotate first bar*/
+.change .bar-1, .change .bar-4 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  -moz-transform: rotate(-45deg) translate(-9px, 6px);
+  -ms-transform: rotate(-45deg) translate(-9px, 6px);
+  -o-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
 
-    /*Fade out the second bar*/
-    .change .bar2 {
-        opacity: 0;
-    }
+/*Fade out the second bar*/
+.change .bar2 {
+    opacity: 0;
+}
 
-    .change .bar5 {
-        width: 0%;
-    }
+.change .bar5 {
+    width: 0;
+}
 
-    /*Rotate last bar*/
-    .change .bar3, .change .bar6 {
-        -webkit-transform: rotate(45deg) translate(-8px, -8px);
-        transform: rotate(45deg) translate(-8px, -8px);
-    }
+/*Rotate last bar*/
+.change .bar-3, .change .bar-6 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  -moz-transform: rotate(45deg) translate(-8px, -8px);
+  -ms-transform: rotate(45deg) translate(-8px, -8px);
+  -o-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
 ```
 ######JS
 ```javascript
-	function toggleMenu(x) {
-		x.classList.toggle("change");
-	}
+function toggleMenu(x) {
+	x.classList.toggle("change");
+}
 ```
 We keep using the same class *.bar* with transition in 0.3s. And the important thing is adding class name for each bar. You can see bar1 to bar6 class.
 When the button is clicked on, *toggleMenu()* will be executed to toggle class *.change* to make magic happens.
