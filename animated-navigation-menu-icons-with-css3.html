@@ -17,134 +17,56 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
     <link rel='shortcut icon' type='image/x-icon' href='http://trungk18.github.io/favicon.ico' />
-
-    <style type="text/css">
-        /*Common CSS*/
-        body {
-            margin: 0;
-        }
-
-        .navbar {
-            padding: 20px;
-            background: #e7e7e7;
-        }
-
-        .navbar-container {
-            max-width: 1170px;
-            margin: 0 auto;
-        }
-
-        .brand > img {
-            max-width: 70px;
-        }
-
-        a {
-            text-decoration: none;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 12px;
-            margin: 4px;
-        }
-
-        .main-background {
-            background: #e7e7e7;
-        }
-
-        .change-content {
-            padding: 5px;
-        }
-
-        a::before, a::after, .btn::before {
-            font-family: 'FontAwesome';
-        }
-
-        .previous-tutorial::before {
-            content: '\f060';
-            margin: 5px;
-        }
-
-        .next-tutorial {
-            float: right;
-        }
-
-            .next-tutorial::after {
-                margin: 5px;
-                content: '\f118';
-            }
-        /*Menu container*/
-        .container {
-            position: relative;
-            cursor: pointer;
-            margin: 60px auto;
-        }
-
-        .bar {
-            display: block;
-            width: 35px;
-            height: 5px;
-            background-color: #333;
-            margin: 6px auto;
-            transition: 0.3s;
-            border-radius: 3px;
-        }
-
-        /*Rotate first bar*/
-        .change .bar1, .change .bar4 {
-            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-            transform: rotate(-45deg) translate(-9px, 6px);
-        }
-
-        /*Fade out the second bar*/
-        .change .bar2 {
-            opacity: 0;
-        }
-
-        .change .bar5 {
-            width: 0%;
-        }
-
-        /*Rotate last bar*/
-        .change .bar3, .change .bar6 {
-            -webkit-transform: rotate(45deg) translate(-8px, -8px);
-            transform: rotate(45deg) translate(-8px, -8px);
-        }
-    </style>
-
+    <link href="style.min.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- Navigation -->
     <div class="change-content main-background">
         <a class="previous-tutorial" href="http://trungk18.github.io/demo/change-navigation-active-class-on-page-scroll.html" title="Change Navigation Active Class on Page Scroll with Bootstrap 3 Navigation & jQuery">Previous Tutorial</a>
         <a class="next-tutorial" href="https://github.com/trungk18/Animated-Navigation-Menu-Icons-with-CSS3" title="How to use CSS3 Transition and Transforms for Animating Menu icon">Back to Github repository</a>
-    </div>
+    </div><!--/change-content-->
     <nav class="navbar">
         <div class="navbar-container">
             <a class="brand" href="http://trungk18.github.io/"><img src="http://trungk18.github.io/img/trungk18.png" class="img-responsive" title="trungk18" alt="trungk18" /></a>
         </div>
-    </nav><!-- End Nav -->
+    </nav><!--/nav-->
 
-    <!-- Content Section -->
-    <div class="content">
-        <section>
+    <section class="content">
+        <div class="icon-container icon-1">
+            <span class="bar bar-1"></span>
+            <span class="bar bar-2"></span>
+            <span class="bar bar-3"></span>
+        </div>
 
-            <div class="container">
-                <span class="bar bar1"></span>
-                <span class="bar bar2"></span>
-                <span class="bar bar3"></span>
-            </div>
+        <div class="icon-container icon-2" onclick="toggleMenu(this)">
+            <span class="bar bar-1"></span>
+            <span class="bar bar-2"></span>
+            <span class="bar bar-3"></span>
+        </div>
 
-            <div class="container" onclick="toggleMenu(this)">
-                <span class="bar bar1"></span>
-                <span class="bar bar2"></span>
-                <span class="bar bar3"></span>
-            </div>
+        <div class="icon-container icon-3" onclick="toggleMenu(this)">
+            <span class="bar bar-4"></span>
+            <span class="bar bar-5"></span>
+            <span class="bar bar-6"></span>
+        </div>
 
-            <div class="container" onclick="toggleMenu(this)">
-                <span class="bar bar4"></span>
-                <span class="bar bar5"></span>
-                <span class="bar bar6"></span>
-            </div>
-        </section>
-    </div>
+        <div class="icon-container icon-4" onclick="toggleMenu(this)">
+            <span class="bar bar-7"></span>
+            <span class="bar bar-8"></span>
+            <span class="bar bar-9"></span>
+        </div>
+
+        <div class="icon-container icon-5" onclick="toggleMenu(this)">
+            <span class="bar bar-10"></span>
+            <span class="bar bar-11"></span>
+            <span class="bar bar-12"></span>
+        </div>
+
+        <div class="icon-container icon-6" onclick="toggleMenu(this)">
+            <span class="bar bar-10"></span>
+            <span class="bar bar-11"></span>
+            <span class="bar bar-12"></span>
+        </div>      
+    </section>
 
     <script>
         function toggleMenu(x) {

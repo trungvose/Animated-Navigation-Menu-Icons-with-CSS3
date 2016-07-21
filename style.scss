@@ -1,0 +1,121 @@
+﻿@import '../jQuery.Loading/css/bourbon/bourbon';
+
+/*Common CSS*/
+body {
+    margin: 0;
+}
+
+.navbar {
+    padding: 20px;
+    background: #e7e7e7;
+}
+
+.navbar-container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.brand > img {
+    max-width: 70px;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    margin: 4px;
+}
+
+.main-background {
+    background: #e7e7e7;
+}
+
+.change-content {
+    padding: 5px;
+}
+
+a::before, a::after, .btn::before {
+    font-family: 'FontAwesome';
+}
+
+.previous-tutorial::before {
+    content: '\f060';
+    margin: 5px;
+}
+
+.next-tutorial {
+    float: right;
+}
+
+.next-tutorial::after {
+    margin: 5px;
+    content: '\f118';
+}
+
+/*Menu container*/
+.content {
+    max-width: 40em;
+    margin: 3em auto;
+}
+
+.icon-container {
+    float: left;
+    position: relative;
+    cursor: pointer;
+    margin: 0 5em 5em;
+    @include transition(all .3s);
+}
+
+.bar {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px auto;
+    @include transition(all .3s);
+    border-radius: 3px;
+}
+
+
+.change {
+    /*Rotate first bar*/
+    .bar-1, .bar-4 {
+        @include transform(rotate(-45deg) translate(-9px, 6px));
+    }
+    /*Fade out the second bar-*/
+    .bar-2 {
+        opacity: 0;
+    }
+    /*Reduce width the second bar-*/
+    .bar-5 {
+        width: 0;
+    }
+    /*Rotate last bar*/
+    .bar-3, .bar-6 {
+        @include transform(rotate(45deg) translate(-8px, -8px));
+    }
+
+    .bar-7 {
+        @include transform(rotate(135deg) translate(8px, 3px) scaleX(.7));
+    }
+
+    .bar-8 {
+        @include transform(rotate(360deg));
+    }
+
+    .bar-9 {
+        @include transform(rotate(225deg) translate(8px, -3px) scaleX(.7));
+    }
+
+    &.icon-5 {
+        @include transform(rotate(180deg));
+    }
+
+    .bar-10 {
+        @include transform(rotate(45deg) translate(8px, -3px) scaleX(.7));
+    }
+
+    .bar-12 {
+        @include transform(rotate(-45deg) translate(8px, 3px) scaleX(.7));
+    }
+}
