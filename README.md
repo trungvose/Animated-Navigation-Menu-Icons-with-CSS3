@@ -1,6 +1,6 @@
 ###How to use CSS3 Transition and Transforms for Animating Menu "hamburger" icon
 **Demo**: 
-- http://trungk18.github.io/demo/animated-navigation-menu-icons-with-css3.html
+- http://trungk18.github.io/Animated-Navigation-Menu-Icons-with-CSS3
 - http://codepen.io/trungk18/pen/jrrXjz
 
 In this demonstration, I will show you how to create an hamburger icon and put some simple animations when clicking.
